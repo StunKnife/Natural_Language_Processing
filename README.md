@@ -27,13 +27,17 @@ Do ponto de vista de Machine Learning, existem cinco etapas principais que devem
 
 Um corpus é conhecido como a coleção inteira de documentos de texto. Por exemplo, suponha que temos milhares de e-mails em uma coleção que precisamos processar e analisar para nosso uso. Esse grupo de e-mails é conhecido como corpus, pois contém todos os documentos de texto.
 ---
+
 **Tokenizar**
+
 O método de dividir uma determinada frase ou coleção de palavras de um documento de texto em palavras separadas/individuais é conhecido como tokenização. Ele remove os caracteres desnecessários, como pontuação. Por exemplo, se tivermos uma frase como: 
     1. Entrada: ** Ele gostou muito da cidade de Londres. Ele está lá por mais dois dias.**
     2. Tokens: ** Ele, realmente, gostou de, Londres, Cidade, Ele, está, lá, por, dois, mais, dias **
 Terminamos com 13 fichas para a frase de entrada acima.
+
 ---
 **Stopwords Removal**
+
 Palavras como: 'this', 'the', 'to' , 'was', 'that', etc. são conhecidas como stopwords e agregam muito pouco valor à análise
 
     * Se forem usados na análise, aumentam a sobrecarga de computação sem agregar muito valor ou insight.
@@ -42,7 +46,9 @@ Palavras como: 'this', 'the', 'to' , 'was', 'that', etc. são conhecidas como st
 
 Como você pode observar, a coluna de tokens contém palavras muito comuns como 'this', 'the', 'to' , 'was', 'that', etc. Essas palavras são conhecidas como stopwords e parecem agregar muito pouco valor à análise. Se forem usados na análise, aumentam a sobrecarga de computação sem agregar muito valor ou insight. Portanto, é sempre considerado uma boa ideia eliminar essas palavras irrelevantes dos tokens. No PySpark, usamos StopWordsRemover para remover as stopwords.
 ---
+
 **Bag of Words**
+
 Consiste em representar os dados do texto em forma numérica para que sejam utilizados por Machine Learning ou qualquer outra análise. 
 
   * Os dados de texto geralmente não são estruturados e variam em seu comprimento. O BOW (Bag of Words) nos permite converter a forma de texto em uma forma de vetor numérico considerando:
@@ -59,9 +65,11 @@ Vocabulário: A lista de palavras únicas que aparecem em todos os documentos. N
       
 O **BOW** não considera a ordem das palavras no documento e o significado semântico da palavra e, portanto, é o método mais básico para representar os dados do texto em forma numérica.
 ---
+
 **Count Vectorizer**
 
 Count Vectorizer faz a contagem da palavra que aparece no documento específico. 
+
 ---
 **Term Frequency – Inverse Document Frequency (TF-IDF)**
 
