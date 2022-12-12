@@ -68,7 +68,9 @@ O **BOW** não considera a ordem das palavras no documento e o significado semâ
 
 **Count Vectorizer**
 
-Count Vectorizer faz a contagem da palavra que aparece no documento específico. 
+Count Vectorizer faz a contagem da palavra que aparece no documento específico. O CountVectorizer cria uma matriz na qual cada palavra única é representada por uma coluna da matriz e cada amostra de texto do documento é uma linha na matriz. O valor de cada célula nada mais é do que a contagem da palavra naquela amostra de texto específica.
+
+Referência: https://www.geeksforgeeks.org/using-countvectorizer-to-extracting-features-from-text/
 
 ---
 **Term Frequency – Inverse Document Frequency (TF-IDF)**
@@ -82,3 +84,16 @@ Isso indica que uma palavra é comum em todo o corpus e não é tão importante 
 **Term Frequency**: Pontuação com base na frequência da palavra no documento atual. 
 
 **Inverse Document Frequency**: Pontuação com base na frequência de documentos que contém a palavra atual.
+
+---
+**Embeddings**
+
+São únicas em termos de capturar o contexto das palavras e representá-las de forma que palavras com significados semelhantes sejam representadas com tipos semelhantes de Embeddings. Existem duas formas de calcular os embeddings.
+    1. Skip Gram
+    2. Continuous Bag of Words (CBOW)
+    
+Ambos os métodos fornecem valores de Embeddings que nada mais são do que pesos da camada oculta em uma rede neural.   
+    1. O word2vec fornece os valores de incorporação para cada palavra
+    2. enquanto doc2vec fornece os valores de incorporação para a frase inteira.
+
+    
