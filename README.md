@@ -59,4 +59,6 @@ Vocabulário: A lista de palavras únicas que aparecem em todos os documentos. N
       
 O **BOW** não considera a ordem das palavras no documento e o significado semântico da palavra e, portanto, é o método mais básico para representar os dados do texto em forma numérica.
 
-    
+**Count Vectorizer**
+
+Count Vectorizer faz a contagem da palavra que aparece no documento específico. 
