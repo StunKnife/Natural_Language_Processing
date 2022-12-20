@@ -14,19 +14,21 @@ e temos que aplicar várias etapas para torná-los prontos para análise. O NLP 
    
 Ou seja, área de ciência se preocupa em oferecer uma série de etapas para processar dados de texto e aplicar um Algoritmo de Aprendizado de Máquina sobre eles.
 
-# Etapas envolvidas no NLP
+# Etapas envolvidas no NLP:
 
 Do ponto de vista de Machine Learning, existem cinco etapas principais que devem ser seguidas para preparar os dados de texto para análise. 
+
     1. Reading the corpus
     2. Tokenization
     3. Cleaning /Stopword removal
     4. Stemming
     5. Converting into Numerical Form 
----    
+    
+  
 **Corpus**
 
 Um corpus é conhecido como a coleção inteira de documentos de texto. Por exemplo, suponha que temos milhares de e-mails em uma coleção que precisamos processar e analisar para nosso uso. Esse grupo de e-mails é conhecido como corpus, pois contém todos os documentos de texto.
----
+
 
 **Tokenizar**
 
@@ -35,7 +37,7 @@ O método de dividir uma determinada frase ou coleção de palavras de um docume
     2. Tokens: ** Ele, realmente, gostou de, Londres, Cidade, Ele, está, lá, por, dois, mais, dias **
 Terminamos com 13 fichas para a frase de entrada acima.
 
----
+
 **Stopwords Removal**
 
 Palavras como: 'this', 'the', 'to' , 'was', 'that', etc. são conhecidas como stopwords e agregam muito pouco valor à análise
@@ -45,7 +47,7 @@ Palavras como: 'this', 'the', 'to' , 'was', 'that', etc. são conhecidas como st
     * Portanto, é importamte eliminar essas palavras irrelevantes dos tokens. No PySpark, usamos StopWordsRemover para remover as stopwords.
 
 Como você pode observar, a coluna de tokens contém palavras muito comuns como 'this', 'the', 'to' , 'was', 'that', etc. Essas palavras são conhecidas como stopwords e parecem agregar muito pouco valor à análise. Se forem usados na análise, aumentam a sobrecarga de computação sem agregar muito valor ou insight. Portanto, é sempre considerado uma boa ideia eliminar essas palavras irrelevantes dos tokens. No PySpark, usamos StopWordsRemover para remover as stopwords.
----
+
 
 **Bag of Words**
 
@@ -64,7 +66,7 @@ Vocabulário: A lista de palavras únicas que aparecem em todos os documentos. N
       *. Outro elemento é a representação da palavra no documento específico usando um valor booleano. Ou seja, se no documento aparece a palavra única, recebe 1, caso contrário, recebe zero.
       
 O **BOW** não considera a ordem das palavras no documento e o significado semântico da palavra e, portanto, é o método mais básico para representar os dados do texto em forma numérica.
----
+
 
 **Count Vectorizer**
 
@@ -72,7 +74,7 @@ Count Vectorizer faz a contagem da palavra que aparece no documento específico.
 
 Referência: https://www.geeksforgeeks.org/using-countvectorizer-to-extracting-features-from-text/
 
----
+
 **Term Frequency – Inverse Document Frequency (TF-IDF)**
 
 É outra abordagem para converter dados de texto em formato numérico.
@@ -85,7 +87,7 @@ Isso indica que uma palavra é comum em todo o corpus e não é tão importante 
 
 **Inverse Document Frequency**: Pontuação com base na frequência de documentos que contém a palavra atual.
 
----
+
 **Embeddings**
 
 São únicas em termos de capturar o contexto das palavras e representá-las de forma que palavras com significados semelhantes sejam representadas com tipos semelhantes de Embeddings. Existem duas formas de calcular os embeddings.
